@@ -20,4 +20,7 @@ jobs:
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
         run: |
-          git push --force https://user:$HF_TOKEN@huggingface.co/spaces/canlasnicole/github-actions> main
+          git config --global user.name "GitHub Action"
+          git config --global user.email "action@github.com"
+          git remote add hf https://user:$HF_TOKEN@huggingface.co/spaces/canlasnicole/github-actions
+          git push --force hf main:main
