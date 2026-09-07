@@ -1,6 +1,6 @@
 ---
 title: CICD Gradio Assignment
-emoji:🚀
+emoji: 🚀
 colorFrom: blue
 colorTo: indigo
 sdk: gradio
