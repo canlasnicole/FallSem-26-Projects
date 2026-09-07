@@ -40,5 +40,5 @@ jobs:
         run: |
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
           git config --global user.name "github-actions[bot]"
-          git remote add space https://$HF_USERNAME:$HF_TOKEN@huggingface.co/spaces/$HF_USERNAME/$SPACE_NAME.git
+          git remote add space https://$HF_USERNAME:$HF_TOKEN@huggingface.co/spaces/canlasnicole/FallSem-26-Projects.git
           git push --force space main
