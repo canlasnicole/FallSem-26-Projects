@@ -3,15 +3,11 @@ name: Sync to Hugging Face hub
 on:
   push:
     branches: [main]
-  # Allows manual triggering from the Actions tab
   workflow_dispatch:
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: Week1
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -22,7 +18,7 @@ jobs:
       - name: Push to Hugging Face
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-       run: |
+        run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git remote add hf https://user:$HF_TOKEN@huggingface.co/spaces/canlasnicole/github-actions
