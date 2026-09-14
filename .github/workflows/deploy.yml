@@ -22,9 +22,8 @@ jobs:
       - name: Push to Hugging Face
         env:
           HF_TOKEN: ${{ secrets.HF_TOKEN }}
-        run: |
-          cd Week1
+       run: |
           git config --global user.name "GitHub Action"
           git config --global user.email "action@github.com"
           git remote add hf https://user:$HF_TOKEN@huggingface.co/spaces/canlasnicole/github-actions
-          git push --force hf main:main
+          git push --force hf $(git subtree split --prefix=Week1 main):refs/heads/main
