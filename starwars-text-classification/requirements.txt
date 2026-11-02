@@ -1,0 +1,9 @@
+numpy
+pandas
+scikit-learn>=1.4
+matplotlib
+seaborn
+tabulate
+jupyter
+# Optional: only needed for the Part 3 Sentence-BERT experiment (sbert_part3.py)
+sentence-transformers
